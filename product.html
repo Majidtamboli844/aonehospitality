@@ -4,7 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aone Hospitality Services</title>
-    <!-- Tailwind CSS CDN -->
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="icon" href="logo.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="logo.png" sizes="16x16" type="image/png">
+    <link rel="apple-touch-icon" href="logo.png">
+    <link rel="icon" href="logo.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="logo.ico" type="image/x-icon">    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
      <style>
    .whatsapp_float{
@@ -64,41 +69,44 @@
 <body class="bg-gray-50 text-gray-800">
 
     <!-- Header Section -->
-    <header class="bg-white shadow-sm py-4 fixed top-0 w-full z-50">
-        <nav class="container mx-auto px-4 flex justify-between items-center">
-            <!-- Logo -->
-            <a href="#hero" class="text-2xl font-bold text-teal-600 flex items-center rounded-md p-2">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 mr-2 text-blue-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
-                    <path d="M2 17l10 5 10-5"></path>
-                    <path d="M2 12l10 5 10-5"></path>
-                </svg>
-                Aone Hospitality Services
+     <header class="bg-white shadow-sm py-4 fixed top-0 w-full z-50">
+        <nav class="container mx-auto px-4 py-3 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-3">
+                <img src="logo.png" alt="Aone Hospitality Services Logo" class="h-10 w-10">
+          <div>
+            <div class="text-lg font-bold text-teal-700">Aone Hospitality Services</div>
+            <div class="text-xs text-gray-500">Wholesale | Corporate Supplies</div>
+          </div>
             </a>
             <!-- Navigation Links -->
             <div class="hidden md:flex space-x-8">
                 <a href="index.html" class="text-gray-600 hover:text-teal-600 font-medium transition duration-300 rounded-md p-2">Home</a>
-                <a href="product.html" class="text-gray-600 hover:text-teal-600 font-medium transition duration-300 rounded-md p-2">Products</a>
-                <a href="#contact" class="px-5 py-2 bg-teal-600 text-white rounded-lg hover:bg-teal-700 transition duration-300 shadow-md">Contact Us</a>
+                <a href="product.html" class="px-5 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition duration-300 shadow-md">Products</a>
+                <a href="about.html" class="text-gray-600 hover:text-teal-600 font-medium transition duration-300 rounded-md p-2">About</a>
+                <a href="contact.html" class="px-5 py-2 bg-teal-600 text-white rounded-lg hover:bg-teal-700 transition duration-300 shadow-md">Contact Us</a>
+                <a href="qualogin.html" class="px-5 py-2 bg-teal-600 text-white rounded-lg hover:bg-teal-700 transition duration-300 shadow-md">User Login</a>
+                <a href="login.html" class="text-gray-600 hover:text-teal-600 font-medium transition duration-300 rounded-md p-2">Admin Login</a>
             </div>
-            <!-- Mobile Menu Button (Hamburger) -->
             <button id="mobile-menu-button" class="md:hidden text-gray-600 hover:text-teal-600 p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500 transition duration-300">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16m-7 6h7" />
                 </svg>
             </button>
         </nav>
-        <!-- Mobile Menu (initially hidden) -->
         <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg py-4 border-t border-gray-200">
             <a href="index.html" class="text-gray-600 hover:text-teal-600 font-medium transition duration-300 rounded-md p-2">Home</a>
-            <a href="product.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-md transition duration-300">Products</a
-            <a href="#contact" class="block px-4 py-2 text-teal-600 hover:bg-teal-50 rounded-md transition duration-300 font-medium">Contact Us</a>
+            <a href="product.html" class="px-5 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition duration-300 shadow-md">Products</a>
+            <a href="about.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-md transition duration-300">About</a>
+            <a href="contact.html" class="block px-4 py-2 text-teal-600 hover:bg-teal-50 rounded-md transition duration-300 font-medium">Contact Us</a>
+            <a href="qualogin.html" class="px-5 py-2 bg-teal-600 text-white rounded-lg hover:bg-teal-700 transition duration-300 shadow-md">User Login</a>
+            <a href="login.html" class="text-gray-600 hover:text-teal-600 font-medium transition duration-300 rounded-md p-2">Admin Login</a>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section id="hero" class="relative bg-gradient-to-r from-blue-600 to-teal-600 text-white py-24 md:py-36 mt-16 overflow-hidden">
-        <div class="absolute inset-0 bg-pattern opacity-10"></div> <!-- Background pattern overlay -->
+<section id="hero" class="relative text-white py-24 md:py-36 mt-16 overflow-hidden">
+    <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('abc.png');"></div>
+    <div class="absolute inset-0 bg-gradient-to-r from-blue-700 to-teal-800 opacity-80"></div> <div class="container mx-auto px-4 text-center relative z-10">
         <div class="container mx-auto px-4 text-center relative z-10">
             <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-6 animate-fade-in-up">
                Explore Our Product Categories <span class="text-yellow-300">Aone Hospitality Services</span>
@@ -122,28 +130,68 @@
     </section>
 
   <!-- Categories Grid -->
-  <section id="categories" class="py-16 px-6 max-w-6xl mx-auto">
-    <h3 class="text-3xl font-semibold text-center mb-10">Product Categories</h3>
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+<section id="categories" class="py-16 px-4 md:px-6 max-w-7xl mx-auto">
+  <h2 class="text-4xl font-extrabold text-gray-900 text-center mb-12 tracking-tight">Our Product Categories</h2>
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
 
-      <!-- Hospitality -->
-      <div class="bg-white border rounded-lg shadow hover:shadow-lg transition text-center p-6">
-         <div class="image"><img src='all products.jpeg'></div>
-        <h4 class="text-xl font-bold mb-2">Hospitality</h4>
-        <p class="text-gray-600 mb-4">Cleaning material solutions.</p>
-        <a href="hos.html" class="text-blue-600 font-semibold hover:underline">View Products →</a>
+    <div class="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden">
+      <div class="relative overflow-hidden">
+        <img src='all products.jpeg' alt="Hospitality Products" class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
       </div>
-
-         <!-- Stationery -->
-      <div class="bg-white border rounded-lg shadow hover:shadow-lg transition text-center p-6">
-       <div class="image"><img src='allsta.jpeg'></div>
-        <h4 class="text-xl font-bold mb-2">Stationery</h4>
-        <p class="text-gray-600 mb-4">Office supplies, school essentials, organizers and more.</p>
-        <a href="sta.html" class="text-blue-600 font-semibold hover:underline">View Products →</a>
+      <div class="p-6 text-center">
+        <h3 class="text-2xl font-bold text-gray-800 mb-2">Hospitality</h3>
+        <p class="text-gray-600 mb-4">Cleaning materials and solutions for professional use.</p>
+        <a href="hos.html" class="inline-flex items-center text-blue-600 font-semibold group-hover:underline transition-colors duration-300">
+          Explore Products →
+        </a>
       </div>
-
     </div>
-  </section>
+
+    <div class="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden">
+      <div class="relative overflow-hidden">
+        <img src='allsta.jpeg' alt="Stationery Products" class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+      </div>
+      <div class="p-6 text-center">
+        <h3 class="text-2xl font-bold text-gray-800 mb-2">Stationery</h3>
+        <p class="text-gray-600 mb-4">Office supplies, school essentials, organizers, and more.</p>
+        <a href="sta.html" class="inline-flex items-center text-blue-600 font-semibold group-hover:underline transition-colors duration-300">
+          Explore Products →
+        </a>
+      </div>
+    </div>
+
+    <div class="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden">
+      <div class="relative overflow-hidden">
+        <img src='crockery.jpg' alt="Crockery Products" class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+      </div>
+      <div class="p-6 text-center">
+        <h3 class="text-2xl font-bold text-gray-800 mb-2">Crockery</h3>
+        <p class="text-gray-600 mb-4">Explore our selection of top-quality crockery products.</p>
+        <a href="crockrey.html" class="inline-flex items-center text-blue-600 font-semibold group-hover:underline transition-colors duration-300">
+          Explore Products →
+        </a>
+      </div>
+    </div>
+
+    <div class="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden">
+      <div class="relative overflow-hidden">
+        <img src='electronic.jpg' alt="Electronics Products" class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+      </div>
+      <div class="p-6 text-center">
+        <h3 class="text-2xl font-bold text-gray-800 mb-2">Electronics</h3>
+        <p class="text-gray-600 mb-4">Quality office electronics and useful gadgets for any workplace.</p>
+        <a href="electronics.html" class="inline-flex items-center text-blue-600 font-semibold group-hover:underline transition-colors duration-300">
+          Explore Products →
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
 
   <!-- Call to Action -->
   <section class="bg-blue-50 py-16 px-6 text-center">
