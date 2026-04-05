@@ -1,386 +1,323 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aone Hospitality Services</title>
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-     <style>
-   .whatsapp_float{
-            position:fixed;
-            bottom:40px;
-            right:20px;
-        }
-        .call_float{
-            position:fixed;
-            bottom:40px;          
-            left:20px;
-        </style>
-    <div class="whatsapp_float">
-        <a href="https://wa.me/919867531298" target="_blank"><img src='wp.png' width="60px"
-                                                                 class="whatsapp_float_btn"/></a>
-    </div>
-     <div class="call_float">
-        <a href="tel:+917387869062" target="_blank"><img src='call.png' width="60px"
-                                                                 class="call_float_btn"/></a>
-    </div>   
-    <style>
-        /* Custom font import for Inter */
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-        body {
-            font-family: 'Inter', sans-serif;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-        }
-        /* Custom scroll-behavior for smooth scrolling on internal links */
-        html {
-            scroll-behavior: smooth;
-        }
-        /* Style for the back-to-top button - initially hidden */
-        #back-to-top {
-            display: none;
-            position: fixed;
-            bottom: 2rem;
-            right: 2rem;
-            z-index: 99;
-            border: none;
-            outline: none;
-            background-color: #0d9488; /* Teal-600 */
-            color: white;
-            cursor: pointer;
-            padding: 0.75rem 1rem;
-            border-radius: 0.5rem; /* Rounded corners */
-            font-size: 1.5rem;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-            transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
-        }
-        #back-to-top:hover {
-            background-color: #0f766e; /* Darker Teal */
-            transform: translateY(-2px);
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aone Hospitality Services</title>
+  <link rel="icon" type="image/png" href="logo.png" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .glass-nav { backdrop-filter: blur(12px); background: rgba(255,255,255,0.85); }
+    .card-hover { transition: all 0.3s ease; }
+    .card-hover:hover { transform: translateY(-8px) scale(1.03); box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+    .whatsapp_float, .call_float { position: fixed; bottom: 20px; z-index: 50; }
+    .whatsapp_float { right: 20px; }
+    .call_float { left: 20px; }
+  </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
+<body class="bg-gray-50">
 
-    <!-- Header Section -->
-    <header class="bg-white shadow-sm py-4 fixed top-0 w-full z-50">
-        <nav class="container mx-auto px-4 flex justify-between items-center">
-            <!-- Logo -->
-            <a href="#hero" class="text-2xl font-bold text-teal-600 flex items-center rounded-md p-2">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 mr-2 text-blue-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
-                    <path d="M2 17l10 5 10-5"></path>
-                    <path d="M2 12l10 5 10-5"></path>
-                </svg>
-                Aone Hospitality Services
+  <!-- Navbar -->
+   <header class="bg-white shadow-sm py-4 fixed top-0 w-full z-50">
+        <nav class="container mx-auto px-4 py-3 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-3">
+                <img src="logo.png" alt="Aone Hospitality Services Logo" class="h-10 w-10">
+          <div>
+            <div class="text-lg font-bold text-teal-700">Aone Hospitality Services</div>
+            <div class="text-xs text-gray-500">Wholesale | Corporate Supplies</div>
+          </div>
             </a>
-            <!-- Navigation Links -->
-            <div class="hidden md:flex space-x-8">
-                <a href="index.html" class="text-gray-600 hover:text-teal-600 font-medium transition duration-300 rounded-md p-2">Home</a>
-                <a href="product.html" class="text-gray-600 hover:text-teal-600 font-medium transition duration-300 rounded-md p-2">Products</a>
-                <a href="#why-choose-us" class="text-gray-600 hover:text-teal-600 font-medium transition duration-300 rounded-md p-2">Why Choose Us</a>
-                <a href="contact.html" class="px-5 py-2 bg-teal-600 text-white rounded-lg hover:bg-teal-700 transition duration-300 shadow-md">Contact Us</a>
-            </div>
-            <!-- Mobile Menu Button (Hamburger) -->
-            <button id="mobile-menu-button" class="md:hidden text-gray-600 hover:text-teal-600 p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500 transition duration-300">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16m-7 6h7" />
-                </svg>
-            </button>
-        </nav>
-        <!-- Mobile Menu (initially hidden) -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg py-4 border-t border-gray-200">
-            <a href="index.html" class="text-gray-600 hover:text-teal-600 font-medium transition duration-300 rounded-md p-2">Home</a>
-            <a href="product.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-md transition duration-300">Products</a>
-            <a href="#why-choose-us" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-md transition duration-300">Why Choose Us</a>
-            <a href="contact.html" class="block px-4 py-2 text-teal-600 hover:bg-teal-50 rounded-md transition duration-300 font-medium">Contact Us</a>
-        </div>
-    </header>
-
-    <!-- Hero Section -->
-    <section id="hero" class="relative bg-gradient-to-r from-blue-600 to-teal-600 text-white py-24 md:py-36 mt-16 overflow-hidden">
-        <div class="absolute inset-0 bg-pattern opacity-10"></div> <!-- Background pattern overlay -->
-        <div class="container mx-auto px-4 text-center relative z-10">
-            <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-6 animate-fade-in-up">
-                Experience Unmatched Cleanliness with <span class="text-yellow-300">Aone Hospitality Services</span>
-            </h1>
-            <p class="text-lg md:text-xl max-w-2xl mx-auto mb-10 opacity-90 animate-fade-in-up delay-200">
-                Premium cleaning solutions for a healthier, happier home and workplace.
-            </p>
-            <a href="product.html" class="inline-block bg-white text-teal-700 font-bold py-3 px-8 rounded-full shadow-lg hover:bg-gray-100 hover:scale-105 transition duration-300 transform animate-fade-in-up delay-400">
-                Explore Our Products
-            </a>
-        </div>
-    </section>
-
-    <!-- About Us Section -->
-    <section id="about" class="py-16 md:py-24 bg-white">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 text-center mb-12">About <span class="text-teal-600">Aone Hospitality Services</span></h2>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16">
-                <div class="order-2 md:order-1 text-center md:text-left">
-                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Experience Aone Hospitality: Where Every Detail Matters</h3>
-                    <p class="text-lg text-gray-600 leading-relaxed mb-6">
-                        At Aone Hospitality Services, we believe that a clean environment is the foundation of a healthy and productive life. Our mission is to provide innovative, high-quality, and eco-friendly cleaning solutions that empower individuals and businesses to maintain impeccable hygiene effortlessly. We envision a world where superior cleanliness is achievable without compromising on sustainability or safety.
-                    </p>
-                    <p class="text-lg text-gray-600 leading-relaxed">
-                        We are committed to continuous research and development, ensuring our products are at the forefront of cleaning technology, delivering exceptional results while being gentle on surfaces and the planet.
-                    </p>
-                </div>
-                <div class="order-1 md:order-2 flex justify-center">
-                </div>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16">
-                <div class="flex justify-center">
-                </div>
-                <div class="text-center md:text-left">
-                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Our Products: Excellence in Every Essential</h3>
-                    <ul class="text-lg text-gray-600 space-y-3 list-disc list-inside">
-                        <li><strong class="text-teal-600">Hospitality Products:</strong> We never compromise on the effectiveness and safety of our products. From luxurious linens to essential room amenities, we supply everything needed to create a memorable and welcoming environment for your guests.</li>
-                        <li><strong class="text-teal-600">Cleanliness Products:</strong> We provide top-tier cleaning supplies and equipment, ensuring impeccable hygiene and a spotless presentation that reflects your commitment to excellence.</li>
-                        <li><strong class="text-teal-600">Stationery Products:</strong> Keep your operations running smoothly with our comprehensive range of high-quality stationery, designed for both functionality and professional appeal.</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="text-center md:text-left">
-                <h3 class="text-2xl font-semibold text-gray-800 mb-6 text-center">Our Journey</h3>
-                <p class="text-lg text-gray-600 leading-relaxed max-w-3xl mx-auto mb-6 text-center">
-                  Aone Hospitality Service began with a simple yet powerful vision: to redefine excellence in the hospitality sector. We saw a need for a reliable partner that not only supplied essential products but also understood the nuances of creating unforgettable guest experiences.
-                </p>
-                <p class="text-lg text-gray-600 leading-relaxed max-w-3xl mx-auto mb-6 text-center">
-                  From our humble beginnings, we've grown steadily, fueled by a passion for quality and an unwavering commitment to our clients. We've built strong relationships with trusted manufacturers and suppliers, ensuring that every hospitality, cleanliness, and stationery product we offer meets the highest standards. Our journey is a testament to our dedication to continuous improvement, always striving to innovate and adapt to the evolving needs of the industry.
-                </p>
-                <p class="text-lg text-gray-600 leading-relaxed max-w-3xl mx-auto mb-6 text-center">
-                 Today, Aone Hospitality Service stands as a testament to our enduring promise: to be your go-to source for the finest hospitality essentials, empowering you to deliver exceptional service every single day.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Product Categories Section -->
-    <section id="products" class="py-16 md:py-24 bg-gray-50">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-12">Our <span class="text-teal-600">Premium Products</span></h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Product Card 1 -->
-                <div class="bg-white p-8 rounded-xl shadow-lg border border-gray-100 transform hover:scale-105 transition duration-300 group">
-                <div class="text-teal-500 mb-6 flex justify-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 group-hover:text-blue-600 transition duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                       <path d="M2 20v-2a4 4 0 0 1 4-4h12a4 4 0 0 1 4 4v2H2z"></path>
-                       <path d="M10 12H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h4"></path>
-                       <path d="M18 12h-4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h4"></path>
-                    </svg>
-                </div>
-                 <h3 class="text-2xl font-semibold text-gray-800 mb-4">Hospitality Essentials</h3>
-                 <p class="text-gray-600 leading-relaxed">
-                   Explore our quality and diverse range of products designed to enhance guest experiences.
-                </p>
-                <a href="hos.html" class="mt-6 inline-block text-teal-600 hover:text-teal-800 font-medium group-hover:underline transition duration-300">Learn More &rarr;</a>
-               </div>
-
-                <!-- Product Card 2 -->
-                <div class="bg-white p-8 rounded-xl shadow-lg border border-gray-100 transform hover:scale-105 transition duration-300 group">
-                 <div class="text-teal-500 mb-6 flex justify-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 group-hover:text-blue-600 transition duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                       <path d="M14.5 4L20 9.5L9.5 20L4 14.5L14.5 4Z"></path>
-                       <path d="M12 8L16 12"></path>
-                       <path d="M7 7L17 17"></path>
-                   </svg>
-              </div>
-               <h3 class="text-2xl font-semibold text-gray-800 mb-4">Essential Stationery Supplies</h3>
-                <p class="text-gray-600 leading-relaxed">
-                    Discover our wide selection of high-quality stationery, from pens and paper to office organizers, for all your operational needs.
-               </p>
-               <a href="sta.html" class="mt-6 inline-block text-teal-600 hover:text-teal-800 font-medium group-hover:underline transition duration-300">Learn More &rarr;</a>
-            </div>
-    </section>
-
-    <!-- Why Choose Us Section -->
-    <section id="why-choose-us" class="py-16 md:py-24 bg-blue-600 text-white">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="text-3xl md:text-4xl font-bold mb-12">Why Choose <span class="text-yellow-300">Aone Hospitality Services</span>?</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Feature 1 -->
-                <div class="flex flex-col items-center p-6 bg-blue-700 bg-opacity-70 rounded-xl shadow-lg transform hover:scale-105 transition duration-300">
-                    <div class="text-yellow-300 mb-4">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M22 11.08V12a10 10 0 1 1-5.93-8.1"></path>
-                            <path d="M22 4L12 14.01l-3-3"></path>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3">Superior Quality</h3>
-                    <p class="text-gray-200">Our products are rigorously tested to ensure the highest standards of cleaning efficacy and safety.</p>
-                </div>
-                <!-- Feature 2 -->
-                <div class="flex flex-col items-center p-6 bg-blue-700 bg-opacity-70 rounded-xl shadow-lg transform hover:scale-105 transition duration-300">
-                    <div class="text-yellow-300 mb-4">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <circle cx="12" cy="12" r="10"></circle>
-                            <path d="M12 8l-4 4 4 4"></path>
-                            <path d="M12 16l4-4-4-4"></path>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3">Comprehensive Product Range: </h3>
-                    <p class="text-gray-200">We are your single source for all critical needs. From luxurious hospitality essentials that pamper your guests, to advanced cleanliness products that ensure impeccable hygiene, and reliable stationery supplies that keep your operations seamless – we've got you covered. This saves you time and simplifies procurement.</p>
-                </div>
-                <!-- Feature 3 -->
-                <div class="flex flex-col items-center p-6 bg-blue-700 bg-opacity-70 rounded-xl shadow-lg transform hover:scale-105 transition duration-300">
-                    <div class="text-yellow-300 mb-4">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M17 18a2 2 0 0 0 2-2V9.5a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2V16a2 2 0 0 0 2 2h1"></path>
-                            <path d="M9 18v3"></path>
-                            <path d="M15 18v3"></path>
-                            <path d="M9 13h6"></path>
-                            <path d="M12 7l1.5-4h2.5L14 7"></path>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3">Customer Satisfaction</h3>
-                    <p class="text-gray-200">Your happiness is our priority. We offer exceptional support and guaranteed results.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
- 
-   <!-- Call to Action / Contact Section -->
-    <section id="contact" class="bg-gradient-to-r from-teal-600 to-blue-600 text-white py-16 md:py-24 text-center">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Experience the <span class="text-yellow-300">Aone Hospitality Services</span> Difference?</h2>
-            <p class="text-lg md:text-xl max-w-2xl mx-auto mb-10 opacity-90">
-                Get in touch with us today to learn more about our products or to place an order.
-            </p>
-            <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="mailto:aonehospitalitys@gmail.com" class="inline-flex items-center justify-center bg-white text-teal-700 font-bold py-3 px-8 rounded-full shadow-lg hover:bg-gray-100 hover:scale-105 transition duration-300 transform">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                        <polyline points="22,6 12,13 2,6"></polyline>
-                    </svg>
-                    Email Us
-                </a>
-                <a href="https://wa.me/919867531298" class="inline-flex items-center justify-center border-2 border-white text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-white hover:text-teal-700 hover:scale-105 transition duration-300 transform">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
-                    </svg>
-                    WhatsApp Us
-                </a>
-                <a href="tel:+917387869062" class="inline-flex items-center justify-center border-2 border-white text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-white hover:text-teal-700 hover:scale-105 transition duration-300 transform">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-3.95-3.95A19.79 19.79 0 0 1 2.05 4.18 2 2 0 0 1 4.05 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-                    </svg>
-                    Call Us
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer Section -->
-    <footer class="bg-gray-800 text-gray-300 py-10">
-        <div class="container mx-auto px-4 text-center">
-            <div class="flex flex-col md:flex-row justify-between items-center mb-8">
-                <!-- Logo -->
-                <a href="#hero" class="text-xl font-bold text-teal-400 flex items-center mb-4 md:mb-0">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2 text-blue-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
-                        <path d="M2 17l10 5 10-5"></path>
-                        <path d="M2 12l10 5 10-5"></path>
-                    </svg>
-                   Aone Hospitality Services
-                </a>
-                <!-- Footer Navigation -->
-                <div class="flex flex-wrap justify-center gap-x-8 gap-y-2 mb-4 md:mb-0">
-                    <a href="about.html" class="hover:text-white transition duration-300">About</a>
-                    <a href="product.html" class="hover:text-white transition duration-300">Products</a>
-                    <a href="#contact" class="hover:text-white transition duration-300">Contact</a>
-                </div>
-                <!-- Social Media Icons (placeholders) -->
-                <div class="flex space-x-4">
-                    <a href="#" class="text-gray-400 hover:text-white transition duration-300">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
-                        </svg>
-                    </a>
-                    <a href="#" class="text-gray-400 hover:text-white transition duration-300">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c17 0 21-12 21-15.5V3z"></path>
-                        </svg>
-                    </a>
-                    <a href="#" class="text-gray-400 hover:text-white transition duration-300">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor">
-                            <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
-                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                            <line x1="17.5" x2="17.5" y1="6.5" y2="6.5"></line>
-                        </svg>
-                    </a>
-                </div>
-            </div>
-            <p class="text-sm text-gray-500">&copy; 2025 Aone Hospitality Services. All rights reserved.</p>
-        </div>
-    </footer>
-
-    <!-- Back to Top Button -->
-    <button id="back-to-top" title="Go to top">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+      <div class="hidden md:flex space-x-8 font-medium">
+        <a href="index.html" class="hover:text-teal-600 transition">Home</a>
+        <a href="product.html" class="hover:text-teal-600 transition">Products</a>
+        <a href="about.html" class="px-4 py-2 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 transition">About</a>
+        <a href="contact.html" class="px-4 py-2 bg-teal-600 text-white rounded-lg shadow hover:bg-teal-700 transition">Contact</a>
+        <a href="qualogin.html" class="px-4 py-2 bg-teal-600 text-white rounded-lg shadow hover:bg-teal-700 transition">User Login</a>
+        <a href="login.html" class="hover:text-teal-600 transition">Admin Login</a>
+      </div>
+      <button id="mobile-menu-button" class="md:hidden text-gray-700 hover:text-teal-600 focus:outline-none">
+        <svg class="h-7 w-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/>
         </svg>
-    </button>
+      </button>
+    </nav>
+    <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg border-t border-gray-200">
+      <div class="flex flex-col space-y-2 p-4 font-medium">
+        <a href="index.html" class="hover:text-teal-600 transition">Home</a>
+        <a href="product.html" class="hover:text-teal-600 transition">Products</a>
+        <a href="about.html" class="px-4 py-2 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 transition">About</a>
+        <a href="contact.html" class="px-4 py-2 bg-teal-600 text-white rounded-lg shadow hover:bg-teal-700 transition">Contact</a>
+        <a href="qualogin.html" class="px-4 py-2 bg-teal-600 text-white rounded-lg shadow hover:bg-teal-700 transition">User Login</a>
+        <a href="login.html" class="hover:text-teal-600 transition">Admin Login</a>
+      </div>
+    </div>
+  </header>
 
-    <script>
-        // JavaScript for Mobile Menu Toggle
-        document.getElementById('mobile-menu-button').addEventListener('click', function() {
-            const mobileMenu = document.getElementById('mobile-menu');
-            mobileMenu.classList.toggle('hidden');
-        });
+  <!-- Hero -->
+  <section class="relative text-white pt-32 pb-28 overflow-hidden">
+    <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('abc.png');"></div>
+    <div class="absolute inset-0 bg-gradient-to-r from-blue-800 to-teal-700 opacity-80"></div>
+    <div class="container mx-auto px-6 text-center relative z-10">
+      <h1 data-aos="fade-up" class="text-4xl md:text-6xl font-extrabold mb-6">
+        Experience Unmatched Cleanliness with <span class="text-yellow-300">Aone Hospitality Services</span>
+      </h1>
+      <p data-aos="fade-up" data-aos-delay="200" class="text-lg md:text-xl mb-8 max-w-2xl mx-auto">
+        Premium cleaning & hospitality solutions for homes, hotels & workplaces.
+      </p>
+      <div data-aos="fade-up" data-aos-delay="400" class="flex flex-col md:flex-row gap-4 justify-center">
+        <a href="product.html" class="px-8 py-3 bg-white text-teal-700 font-bold rounded-full shadow hover:scale-105 transition">Explore Products</a>
+        <a href="A One Hospitality Services.pdf" download class="px-8 py-3 bg-yellow-400 text-gray-900 font-bold rounded-full shadow hover:bg-yellow-500 transition">Download Profile</a>
+        <a href="contact.html" class="px-8 py-3 border-2 border-white rounded-full font-bold hover:bg-white hover:text-teal-700 transition">Contact Us</a>
+      </div>
+    </div>
+  </section>
 
-        // JavaScript for Back to Top Button visibility
-        const backToTopButton = document.getElementById('back-to-top');
+  <!-- About -->
+<!-- About -->
+<section class="py-24 bg-gradient-to-r from-gray-50 via-white to-gray-100" id="about">
+  <div class="container mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
 
-        window.onscroll = function() {
-            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-                backToTopButton.style.display = "block";
-            } else {
-                backToTopButton.style.display = "none";
-            }
-        };
+    <!-- Text Content -->
+    <div data-aos="fade-right">
+      <h2 class="text-4xl md:text-5xl font-extrabold mb-6 text-gray-800 leading-snug">
+        About <span class="text-yellow-300">Aone Hospitality Services</span>
+      </h2>
+      <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+        We are a trusted provider of <span class="font-semibold text-yellow-300">hospitality, cleaning, 
+        crockery, stationery, and office electronic solutions</span>. 
+        With a commitment to quality and customer satisfaction, 
+        we help businesses and households maintain high standards of cleanliness, comfort, and productivity. 
+      </p>
 
-        // Smooth scroll for back to top button
-        backToTopButton.addEventListener('click', function() {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
+      <!-- Feature Points -->
+      <div class="grid sm:grid-cols-2 gap-6 text-left">
+        <div class="flex items-start space-x-3">
+          <span class="bg-yellow-300 text-white rounded-full p-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+          </span>
+          <p class="text-gray-700 font-medium">Serving 500+ satisfied clients nationwide</p>
+        </div>
+        <div class="flex items-start space-x-3">
+          <span class="bg-yellow-300 text-white rounded-full p-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+          </span>
+          <p class="text-gray-700 font-medium">Eco-friendly and sustainable solutions</p>
+        </div>
+        <div class="flex items-start space-x-3">
+          <span class="bg-yellow-300 text-white rounded-full p-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+          </span>
+          <p class="text-gray-700 font-medium">Trusted partner for top hotels & corporates</p>
+        </div>
+        <div class="flex items-start space-x-3">
+          <span class="bg-yellow-300 text-white rounded-full p-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+          </span>
+          <p class="text-gray-700 font-medium">Commitment to quality & customer-first service</p>
+        </div>
+      </div>
+    </div>
 
-        // Smooth scroll for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
+    <!-- Image Content -->
+    <div data-aos="fade-left" class="flex justify-center">
+      <img src="abc.png" 
+           alt="About Aone Hospitality" 
+           class="rounded-2xl shadow-2xl w-full max-w-lg object-cover">
+    </div>
+  </div>
+</section>
 
-                const targetId = this.getAttribute('href');
-                const targetElement = document.querySelector(targetId);
 
-                // Close mobile menu if open
-                const mobileMenu = document.getElementById('mobile-menu');
-                if (!mobileMenu.classList.contains('hidden')) {
-                    mobileMenu.classList.add('hidden');
-                }
+  <!-- Products -->
+  <section class="py-20 bg-gray-50" id="products">
+    <div class="container mx-auto px-6 text-center">
+      <h2 data-aos="fade-up" class="text-3xl md:text-4xl font-bold mb-12">Our <span class="text-yellow-300">Products</span></h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+       <div data-aos="zoom-in" data-aos-delay="450" class="bg-white p-8 rounded-xl shadow card-hover">
+          <h3 class="text-xl font-semibold mb-3">Hospitality Essentials/Cleanliness Products</h3>
+           <img src="all products.jpeg" alt="Crockery" class="mx-auto mb-4 rounded-lg shadow-md h-40 object-cover">
+          <p class="text-gray-600">Top-tier cleaning supplies ensuring hygiene & safety.</p>
+        </div>
+        <div data-aos="zoom-in" data-aos-delay="450" class="bg-white p-8 rounded-xl shadow card-hover">
+          <h3 class="text-xl font-semibold mb-3">Stationery Supplies</h3>
+           <img src="allsta.jpeg" alt="Crockery" class="mx-auto mb-4 rounded-lg shadow-md h-40 object-cover">
+          <p class="text-gray-600">High-quality stationery for smooth business operations.</p>
+        </div>
+        <!-- New Products -->
+        <div data-aos="zoom-in" data-aos-delay="450" class="bg-white p-8 rounded-xl shadow card-hover">
+          <h3 class="text-xl font-semibold mb-3">Crockery Products</h3>
+          <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d" alt="Crockery" class="mx-auto mb-4 rounded-lg shadow-md h-40 object-cover">
+          <p class="text-gray-600">Premium crockery for homes, hotels & restaurants.</p>
+        </div>
+        <div data-aos="zoom-in" data-aos-delay="600" class="bg-white p-8 rounded-xl shadow card-hover">
+          <h3 class="text-xl font-semibold mb-3">Office Electronics</h3>
+          <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c" alt="Office Electronics" class="mx-auto mb-4 rounded-lg shadow-md h-40 object-cover">
+          <p class="text-gray-600">Modern office electronic gadgets to boost productivity.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Employee & Transport Sections Added -->
 
-                if (targetElement) {
-                    // Adjust scroll position to account for fixed header
-                    const headerOffset = 64; // Approximate height of the header
-                    const elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
-                    const offsetPosition = elementPosition - headerOffset;
+  <!-- Number of Employees Section -->
+  <section class="py-20 bg-gray-50" id="employees">
+    <div class="container mx-auto px-6 text-center">
+      <h2 data-aos="fade-up" class="text-3xl md:text-4xl font-bold mb-12">
+        Number of <span class="text-yellow-300">Employees</span> by Designation
+      </h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div data-aos="fade-up" class="bg-white p-8 rounded-xl shadow card-hover">
+          <h3 class="text-xl font-semibold mb-3">Supervisors</h3>
+          <p class="text-gray-600 text-lg">5 Employees</p>
+        </div>
+        <div data-aos="fade-up" data-aos-delay="100" class="bg-white p-8 rounded-xl shadow card-hover">
+          <h3 class="text-xl font-semibold mb-3">Housekeeping Staff</h3>
+          <p class="text-gray-600 text-lg">40 Employees</p>
+        </div>
+        <div data-aos="fade-up" data-aos-delay="200" class="bg-white p-8 rounded-xl shadow card-hover">
+          <h3 class="text-xl font-semibold mb-3">Technicians</h3>
+          <p class="text-gray-600 text-lg">10 Employees</p>
+        </div>
+        <div data-aos="fade-up" data-aos-delay="300" class="bg-white p-8 rounded-xl shadow card-hover">
+          <h3 class="text-xl font-semibold mb-3">Drivers</h3>
+          <p class="text-gray-600 text-lg">6 Employees</p>
+        </div>
+        <div data-aos="fade-up" data-aos-delay="400" class="bg-white p-8 rounded-xl shadow card-hover">
+          <h3 class="text-xl font-semibold mb-3">Admin & Support</h3>
+          <p class="text-gray-600 text-lg">4 Employees</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-                    window.scrollTo({
-                        top: offsetPosition,
-                        behavior: "smooth"
-                    });
-                }
-            });
-        });
-    </script>
+  <!-- Mode of Transport Section -->
+  <section class="py-20 bg-gradient-to-r from-teal-600 to-blue-700 text-white" id="transport">
+    <div class="container mx-auto px-6 text-center">
+      <h2 data-aos="fade-up" class="text-3xl md:text-4xl font-bold mb-12">
+        Mode of <span class="text-yellow-300">Transport</span>
+      </h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div data-aos="zoom-in" class="p-8 bg-white/10 rounded-xl card-hover">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 mx-auto mb-4 text-yellow-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 13V6a1 1 0 011-1h14a1 1 0 011 1v7m-2 4a2 2 0 11-4 0m-6 0a2 2 0 11-4 0m0 0H5a1 1 0 01-1-1v-1h16v1a1 1 0 01-1 1h-1z" />
+          </svg>
+          <h3 class="text-xl font-semibold">Company Vans</h3>
+        </div>
+        <div data-aos="zoom-in" data-aos-delay="100" class="p-8 bg-white/10 rounded-xl card-hover">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 mx-auto mb-4 text-yellow-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 11c0 1.657-1.343 3-3 3s-3-1.343-3-3 1.343-3 3-3 3 1.343 3 3zm9 0c0 1.657-1.343 3-3 3s-3-1.343-3-3 1.343-3 3-3 3 1.343 3 3z" />
+          </svg>
+          <h3 class="text-xl font-semibold">Public Transport</h3>
+        </div>
+        <div data-aos="zoom-in" data-aos-delay="200" class="p-8 bg-white/10 rounded-xl card-hover">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 mx-auto mb-4 text-yellow-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M7 12a2 2 0 114 0m2 0a2 2 0 114 0" />
+          </svg>
+          <h3 class="text-xl font-semibold">Two-Wheelers</h3>
+        </div>
+        <div data-aos="zoom-in" data-aos-delay="300" class="p-8 bg-white/10 rounded-xl card-hover">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 mx-auto mb-4 text-yellow-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6l4 2" />
+          </svg>
+          <h3 class="text-xl font-semibold">Bicycles</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Company Highlight -->
+  <section class="py-20 bg-gradient-to-r from-yellow-400 via-orange-400 to-red-400 text-white">
+    <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+      <div data-aos="fade-right">
+        <h2 class="text-3xl md:text-4xl font-bold mb-6">A Company Built on <span class="text-gray-900">Trust & Quality</span></h2>
+        <p class="text-lg mb-6">
+          With years of experience, Aone Hospitality Services has become a trusted partner for top hotels, corporates, and households. 
+          Our commitment to quality and innovation ensures that we provide only the best for our clients.
+        </p>
+        <p class="font-semibold">✨ Serving 500+ clients across India with pride.</p>
+      </div>
+        <div data-aos="fade-left">
+      <!-- Added your uploaded image here -->
+      <img src="https://thumbs.dreamstime.com/b/flat-gold-company-core-values-icon-set-innovation-stability-security-reliability-legal-sensitivity-trust-high-standard-quality-191050758.jpg" 
+           alt="Customer Trust - Aone Hospitality" 
+           class="rounded-2xl shadow-2xl w-full max-w-lg object-cover">
+    </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="py-20 bg-gradient-to-r from-blue-700 to-teal-700 text-white">
+    <div class="container mx-auto px-6 text-center">
+      <h2 data-aos="fade-up" class="text-3xl md:text-4xl font-bold mb-12">Why Choose <span class="text-yellow-300">Us</span>?</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div data-aos="flip-left" class="p-8 bg-white/10 rounded-xl card-hover">
+          <h3 class="text-xl font-semibold mb-3">Superior Quality</h3>
+          <p>Our products are rigorously tested for the highest standards.</p>
+        </div>
+        <div data-aos="flip-left" data-aos-delay="150" class="p-8 bg-white/10 rounded-xl card-hover">
+          <h3 class="text-xl font-semibold mb-3">Comprehensive Range</h3>
+          <p>From hospitality to stationery — we cover all essentials.</p>
+        </div>
+        <div data-aos="flip-left" data-aos-delay="300" class="p-8 bg-white/10 rounded-xl card-hover">
+          <h3 class="text-xl font-semibold mb-3">Customer First</h3>
+          <p>Exceptional support and satisfaction guaranteed.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="py-20 bg-white text-center" id="contact">
+    <h2 data-aos="fade-up" class="text-3xl md:text-4xl font-bold mb-6">Get in Touch</h2>
+    <p class="mb-10 text-lg text-gray-600">We’d love to help you with our products & services.</p>
+    <div class="flex flex-col sm:flex-row justify-center gap-4">
+      <a href="mailto:aonehospitalitys@gmail.com" class="px-6 py-3 bg-teal-600 text-white rounded-lg hover:bg-teal-700 transition">Email Us</a>
+      <a href="https://wa.me/919867531298" class="px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition">WhatsApp</a>
+      <a href="tel:+917387869062" class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">Call Us</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-400 py-8">
+    <div class="container mx-auto px-6 text-center">
+      <p>&copy; 2025 Aone Hospitality Services. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Floating Buttons -->
+  <div class="whatsapp_float">
+    <a href="https://wa.me/919867531298" target="_blank">
+      <img src="wp.png" alt="WhatsApp" width="55" />
+    </a>
+  </div>
+  <div class="call_float">
+    <a href="tel:+917387869062" target="_blank">
+      <img src="call.png" alt="Call" width="55" />
+    </a>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1000, once: true });
+    const mobileMenuBtn = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
 </body>
 </html>
